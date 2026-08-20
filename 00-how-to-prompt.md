@@ -2,7 +2,9 @@
 
 Every step file uses the same **Basic → Intermediate → Advanced** ladder. This page explains *why* the output changes.
 
-**Terms:** [GLOSSARY.md](GLOSSARY.md) · Handbook: [prompting.md](../ai-dev-handbook/prompting.md) · Safety: [what-not-to-do.md](../ai-dev-handbook/what-not-to-do.md)
+**Terms:** [GLOSSARY.md](GLOSSARY.md) · **Technique definitions:** [prompt-engineering-techniques.md](../ai-dev-handbook/prompt-engineering-techniques.md) · Workshop ladder: [prompting.md](../ai-dev-handbook/prompting.md) · Safety: [what-not-to-do.md](../ai-dev-handbook/what-not-to-do.md)
+
+**Not building a product?** Job descriptions, learning concepts, exploring ideas: [ai-for-work-and-learning.md](../ai-dev-handbook/ai-for-work-and-learning.md)
 
 ---
 
@@ -21,17 +23,21 @@ Every step file uses the same **Basic → Intermediate → Advanced** ladder. Th
 
 ## Techniques (when to use)
 
-| Technique | What it does | Best in step |
-|-----------|--------------|--------------|
-| **Quality ladder** | Weak → specific → full context | All |
-| **Output schema** | “Return only this table” | 1–3, 5 |
-| **Chain then format** | “Think in bullets, then output table only” | 1, 2, 5 |
-| **Critique / red-team** | “Attack this plan like an attacker; list 5 failures” | 2, 3, 5 |
-| **Closed loop** | Findings → fix → re-test | 5 |
-| **Depth knob** | “1 page max” vs “full **PRD (Product Requirements Document)**” | All |
-| **Few-shot** | “Good **API** row looks like: GET /tasks …” | 3, 4 |
-| **Context pack** | Paste `PRD.md` + `@ARCHITECTURE.md` | 3–6 |
-| **Verify instruction** | “List sources I must open” | 1, 4 |
+| Technique | What it does | Best in step | Learn more |
+|-----------|--------------|--------------|------------|
+| **Zero-shot** | Task with no examples | All (weak Basic prompts) | [techniques § Zero-shot](../ai-dev-handbook/prompt-engineering-techniques.md#zero-shot) |
+| **Few-shot** | 1–3 examples then your task | 3, 4 | [techniques § Few-shot](../ai-dev-handbook/prompt-engineering-techniques.md#one-shot-and-few-shot) |
+| **Role prompting** | “You are a …” | 1–3, 5 | [techniques § Role](../ai-dev-handbook/prompt-engineering-techniques.md#role-prompting) |
+| **Quality ladder** | Weak → specific → full context | All | [prompting.md](../ai-dev-handbook/prompting.md) |
+| **Structured output** | “Return only this table” | 1–3, 5 | [techniques § Structured](../ai-dev-handbook/prompt-engineering-techniques.md#structured-output) |
+| **Chain-of-thought (CoT)** | Step-by-step reasoning | Debug, design | [techniques § CoT](../ai-dev-handbook/prompt-engineering-techniques.md#chain-of-thought-cot) |
+| **Chain then format** | Think in bullets, table only | 1, 2, 5 | [techniques § Chain then format](../ai-dev-handbook/prompt-engineering-techniques.md#chain-then-format) |
+| **Prompt chaining** | File → next file | All steps | [techniques § Chaining](../ai-dev-handbook/prompt-engineering-techniques.md#prompt-chaining) |
+| **Critique / red-team** | Attack your plan | 2, 3, 5 | [techniques § Red-team](../ai-dev-handbook/prompt-engineering-techniques.md#critique--red-team) |
+| **Closed loop** | Test → fix → re-test | 5 | [techniques § Closed loop](../ai-dev-handbook/prompt-engineering-techniques.md#closed-loop) |
+| **Context pack** | Paste `PRD.md` + `@ARCHITECTURE.md` | 3–6 | [how-editors-work.md](../ai-dev-handbook/how-editors-work.md) |
+| **Verify instruction** | “List sources I must open” | 1, 4 | [prompting.md](../ai-dev-handbook/prompting.md) |
+| **Depth knob** | `skim` \| `standard` \| `thorough` | All | below |
 
 ---
 

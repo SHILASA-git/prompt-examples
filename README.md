@@ -4,7 +4,7 @@ Copy-paste prompts for **after the workshop**: validate an idea → requirements
 
 **SPR** = **S**ecurity, **P**erformance, **R**esiliency (how safe, fast, and recoverable your app is — not just features).
 
-**Workshop labs:** [`ai-workshop`](../ai-workshop/) · **Tool how-to:** [`ai-dev-handbook`](../ai-dev-handbook/) · **Safety:** [what-not-to-do.md](../ai-dev-handbook/what-not-to-do.md) · **Terms:** [GLOSSARY.md](GLOSSARY.md)
+**Workshop labs:** [`ai-workshop`](../ai-workshop/) · **Tool how-to:** [`ai-dev-handbook`](../ai-dev-handbook/) · **Techniques:** [prompt-engineering-techniques.md](../ai-dev-handbook/prompt-engineering-techniques.md) · **Work / learn / explore:** [ai-for-work-and-learning.md](../ai-dev-handbook/ai-for-work-and-learning.md) · **Safety:** [what-not-to-do.md](../ai-dev-handbook/what-not-to-do.md) · **Terms:** [GLOSSARY.md](GLOSSARY.md)
 
 Same idea, three prompt levels on every page: **Basic → Intermediate → Advanced**. Change **context, format, depth, and constraints** — not just the model name.
 
@@ -14,7 +14,7 @@ Same idea, three prompt levels on every page: **Basic → Intermediate → Advan
 
 | Step | File | You save |
 |------|------|----------|
-| 0 | [00-how-to-prompt.md](00-how-to-prompt.md) | Techniques + tools |
+| 0 | [00-how-to-prompt.md](00-how-to-prompt.md) | Techniques + tools · definitions in [handbook](../ai-dev-handbook/prompt-engineering-techniques.md) |
 | 1 | [01-market-research.md](01-market-research.md) | `RESEARCH.md` |
 | 2 | [02-requirements.md](02-requirements.md) | `PRD.md`, `NFR.md` (see [GLOSSARY.md](GLOSSARY.md)) |
 | 3 | [03-design-architecture.md](03-design-architecture.md) | `ARCHITECTURE.md` |

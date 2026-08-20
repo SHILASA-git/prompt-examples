@@ -65,10 +65,18 @@ Plain English first. Acronyms appear in prompts; use this page when you forget o
 
 | Term | Meaning |
 |------|---------|
+| **Zero-shot** | Prompt with **no examples** — instruction only |
+| **One-shot / few-shot** | Show **1–3 examples**, then ask for the same shape on a new task |
+| **Chain-of-thought (CoT)** | “Think step by step” before the final answer |
+| **Role prompting** | “You are a [role]…” to set tone and depth |
+| **Structured output** | Require exact sections, table, or JSON — not a free essay |
+| **Prompt chaining** | Save step 1 output → use as step 2 input ([01]→[06]) |
 | **Basic / Intermediate / Advanced** | Same task, more context + constraints + output shape |
 | **Depth knob** | `skim` \| `standard` \| `thorough` — how long the answer should be |
 | **Context pack** | Files you paste or `@` in Cursor (`PRD.md`, `ARCHITECTURE.md`) |
 | **Handoff** | Save output to a file; next step uses that file as input |
+
+Full explanations: [prompt-engineering-techniques.md](../ai-dev-handbook/prompt-engineering-techniques.md)
 
 ---
 
