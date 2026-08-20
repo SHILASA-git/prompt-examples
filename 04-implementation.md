@@ -1,8 +1,8 @@
 # Step 4 — Implementation and validating (incl. SPR)
 
-**Goal:** Code matches `ARCHITECTURE.md` and `NFR.md`. **Artifacts:** working repo, pytest, updated README.
+**Goal:** Code matches `ARCHITECTURE.md` and `NFR.md` (**N**on-**F**unctional **R**equirements). **Artifacts:** working repo, **pytest** (Python test runner), updated README.
 
-**Tools:** Cursor Agent + Copilot · Claude for review only · Never paste `.env`.
+**Tools:** Cursor Agent + Copilot · Claude for review only · Never paste `.env` · [GLOSSARY.md](GLOSSARY.md)
 
 Handbook: [jobs/coding.md](../ai-dev-handbook/jobs/coding.md) · [what-not-to-do.md](../ai-dev-handbook/what-not-to-do.md)
 

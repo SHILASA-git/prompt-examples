@@ -1,8 +1,8 @@
 # Step 6 — Secure deployment (incl. SPR)
 
-**Goal:** Ship demo safely on **laptop + GitHub** first. Cloud is stretch. **Artifact:** `DEPLOY.md`
+**Goal:** Ship demo safely on **laptop + GitHub** first. Cloud is **stretch** (optional later). **Artifact:** `DEPLOY.md` (how to run and release safely)
 
-**Tools:** Claude (checklist) · Cursor (Dockerfile / GitHub Actions **if** you choose) · **Never** paste cloud keys into chat
+**Tools:** Claude (checklist) · Cursor (Dockerfile / **GitHub Actions** for **CI (Continuous Integration)** if you choose) · **Never** paste cloud keys into chat · [GLOSSARY.md](GLOSSARY.md)
 
 Workshop default: no cloud account required. This step is **thinking + local prod-like** habits.
 
@@ -14,7 +14,7 @@ Workshop default: no cloud account required. This step is **thinking + local pro
 How do I deploy my app?
 ```
 
-**Typical outcome:** Generic Docker/K8s essay you cannot run.
+**Typical outcome:** Generic Docker / **K8s (Kubernetes)** essay you cannot run.
 
 ---
 
@@ -34,7 +34,7 @@ No AWS. No secrets in file.
 ## Advanced — local / GitHub deploy
 
 ```
-Role: DevSecOps-minded student preparing a demo and portfolio repo.
+Role: **DevSecOps**-minded student (build with **security** from the start) preparing a demo and portfolio repo.
 
 Context:
 [paste ARCHITECTURE.md deploy-relevant sections]
@@ -44,7 +44,7 @@ depth: thorough
 
 Output DEPLOY.md sections:
 
-1. Pre-deploy checklist (SPR)
+1. Pre-deploy checklist (**SPR** — Security, Performance, Resiliency)
    ### Security
    - .gitignore verified; scan_repo.py clean
    - .env.example committed; .env not
@@ -59,7 +59,7 @@ Output DEPLOY.md sections:
    - Health endpoint
    - Rollback: git tag + restore DB file
 
-2. Runbook: install → migrate → run API → run UI → smoke test curl
+2. Runbook: install → migrate → run API → run UI → **smoke test** (quick curl check)
 
 3. Secrets: where they live (env only); rotation if ever leaked
 
@@ -93,7 +93,7 @@ Show workflow file only. Explain what NOT to commit.
 - [ ] `.env` not in Git
 - [ ] `pytest` green
 - [ ] README matches run commands
-- [ ] Can explain one SPR trade-off without opening chat
+- [ ] Can explain one **SPR (Security, Performance, Resiliency)** trade-off without opening chat
 
 ---
 

@@ -2,6 +2,8 @@
 
 Same app through all six steps. Compare **Basic vs Advanced** output *shape* — not copy-paste AI answers.
 
+**Terms:** [GLOSSARY.md](GLOSSARY.md) · **SPR** = Security, Performance, Resiliency · **MVP** = Minimum Viable Product · **PRD** = Product Requirements Document · **NFR** = Non-Functional Requirements · **API** = Application Programming Interface
+
 **Idea:** Students upload markdown notes; app indexes by course code; Q&A answers **only from their notes** (keyword search first).
 
 ---
@@ -26,9 +28,9 @@ Students re-read entire folders before exams; no search by topic.
 | WhatsApp PDFs | No consent / version chaos |
 
 ## Kill criteria
-- If <5 classmates will upload notes in week 1, pivot to solo use only.
+- If <5 classmates will upload notes in week 1, pivot (change direction) to solo use only.
 
-## SPR risks
+## SPR (Security, Performance, Resiliency) risks
 - Security: do not store other students' notes without permission
 - Performance: search must feel instant on 50 files
 - Resiliency: if index corrupts, offer re-index button
@@ -38,15 +40,15 @@ Students re-read entire folders before exams; no search by topic.
 
 ## Step 2 — Requirements
 
-**Must story (from advanced PRD):**
+**Must story (from advanced PRD — Product Requirements Document):**
 
 > As a student, I want to search my notes by keyword so that I find a topic in seconds.
 
-**NFR snippet (testable):**
+**NFR (Non-Functional Requirements) snippet (testable):**
 
 - Security: no API keys in repo; upload only user's own files
-- Performance: search 200 chunks under 2s on laptop
-- Resiliency: sqlite index rebuild from `docs/` folder
+- Performance: search 200 chunks under 2 seconds on laptop
+- Resiliency: **SQLite** database index rebuild from `docs/` folder
 
 ---
 
@@ -61,7 +63,7 @@ flowchart LR
   API --> FS[docs/ folder]
 ```
 
-**API row:** `GET /search?q=` → 200 + `[{path, snippet}]` | 400 empty q
+**API row:** `GET /search?q=` → HTTP 200 + `[{path, snippet}]` | 400 if query empty
 
 ---
 
@@ -73,11 +75,11 @@ flowchart LR
 
 ---
 
-## Step 5 — SPR loop
+## Step 5 — SPR test loop (Security, Performance, Resiliency)
 
 **Finding (example Critical):** Search returns other users' paths if multi-tenant added too early.
 
-**Fix prompt:** “Scope MVP to single-user only; document in ARCHITECTURE; add test that only `docs/` owner paths appear.”
+**Fix prompt:** “Scope **MVP (Minimum Viable Product)** to single-user only; document in ARCHITECTURE; add test that only `docs/` owner paths appear.”
 
 Re-run `pytest` → close Critical.
 

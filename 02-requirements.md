@@ -1,14 +1,19 @@
 # Step 2 — Requirements and planning (incl. SPR)
 
-**Goal:** Testable scope before design. **Artifacts:** `PRD.md`, `NFR.md` (security, performance, resiliency)
+**Goal:** Testable scope before design. **Artifacts:**
 
-**Tools:** Claude (primary) · Paste `RESEARCH.md` as context.
+- **`PRD.md`** — **P**roduct **R**equirements **D**ocument (features, stories, scope)
+- **`NFR.md`** — **N**on-**F**unctional **R**equirements (security, performance, resiliency — not the feature list)
+
+**SPR (Security, Performance, Resiliency):** write these as **testable** bullets in `NFR.md`, not “make it fast.”
+
+**Tools:** Claude (primary) · Paste `RESEARCH.md` as context. · [GLOSSARY.md](GLOSSARY.md)
 
 ---
 
 ## What to save
 
-**PRD.md:** user stories, MVP scope, acceptance criteria  
+**PRD.md:** user stories, **MVP (Minimum Viable Product)** scope, acceptance criteria  
 **NFR.md:** non-functional requirements as **testable** bullets
 
 ---
@@ -34,7 +39,7 @@ Using this research:
 
 Output:
 1. Five user stories (As a … I want … so that …)
-2. MVP feature list (must ship in 1 week)
+2. MVP (Minimum Viable Product) feature list (must ship in 1 week)
 3. Non-goals (explicit)
 4. Ten acceptance tests in plain English
 
@@ -59,19 +64,19 @@ Constraints:
 Deliverables:
 
 ## PRD.md
-- User stories (MoSCoW: Must / Should / Could)
+- User stories (**MoSCoW**: **Must** / **Should** / **Could** / **Won't** priorities)
 - MVP vs v2 table
-- Acceptance criteria per Must story (Given/When/Then)
+- Acceptance criteria per Must story (**Given / When / Then** test format)
 
 ## NFR.md — testable only
 ### Security
 - Auth approach for MVP (or explicit TODO)
-- Secrets handling (.env, no keys in Git)
+- Secrets handling (`.env` file, no keys in Git)
 - Input validation rules
 - Data retention / delete
 
 ### Performance
-- Target response time for main API (e.g. p95 under 500ms on laptop)
+- Target response time for main API (e.g. **p95** — 95% of requests under 500 ms on laptop)
 - Max payload size
 - What we measure (not “fast enough”)
 
@@ -83,7 +88,7 @@ Deliverables:
 
 Also:
 - Open questions (max 5)
-- Red-team: five ways this MVP fails in a demo
+- **Red-team:** pretend you are an attacker — five ways this MVP fails in a demo
 
 No code. Tables where helpful.
 ```
@@ -95,13 +100,13 @@ No code. Tables where helpful.
 ## Critique prompt (second pass)
 
 ```
-Red-team this PRD and NFR as a senior engineer.
+Red-team (attack mindset) this PRD and NFR as a senior engineer.
 
 [paste PRD.md + NFR.md]
 
 List:
 ## Critical gaps (block demo)
-## SPR gaps (untestable requirements)
+## SPR gaps (Security, Performance, Resiliency requirements that are not testable)
 ## Scope creep to cut
 
 Max 15 bullets. No rewrite — findings only.

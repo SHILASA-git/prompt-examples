@@ -1,10 +1,10 @@
-# Step 5 — SPR testing and closed loop
+# Step 5 — SPR (Security, Performance, Resiliency) testing and closed loop
 
-**Goal:** Find Critical issues → fix → re-test until demo-safe. **Artifacts:** `TESTING.md` or findings in `LEARNING.md`
+**Goal:** Find **Critical** issues → fix → re-test until demo-safe. **Artifacts:** `TESTING.md` or findings in `LEARNING.md`
 
-**Tools:** Claude (findings) → Cursor (minimal patch) · Your scanner from Day 2 AppSec lab
+**Tools:** Claude (findings) → Cursor (minimal patch) · Your secret scanner from Day 2 **AppSec (Application Security)** lab · [GLOSSARY.md](GLOSSARY.md)
 
-**Loop:** test → findings → fix Critical only → re-run → update `ARCHITECTURE.md` if drift
+**Closed loop:** test → findings → fix Critical only → re-run → update `ARCHITECTURE.md` if **drift** (code no longer matches design)
 
 ---
 
@@ -38,7 +38,7 @@ Mark top 3 for MVP. No code yet.
 ## Advanced — security
 
 ```
-AppSec review for student FastAPI on localhost.
+AppSec (Application Security) review for student FastAPI on localhost.
 
 ARCHITECTURE + NFR Security:
 [paste — redact any real secrets]
@@ -70,7 +70,7 @@ NFR Performance:
 Describe:
 1. Likely bottleneck at 100 users on one laptop
 2. Three cheap measurements I should run (commands or pytest)
-3. One fix if p95 exceeds NFR target
+3. One fix if **p95** (95th percentile response time) exceeds NFR target
 
 No load-test framework unless I already installed it.
 ```

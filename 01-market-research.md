@@ -1,10 +1,12 @@
 # Step 1 — Market research and idea validation
 
-**Goal:** Decide if the problem is real **before** you build. **Artifact:** `RESEARCH.md`
+**Goal:** Decide if the problem is real **before** you build. **Artifact:** `RESEARCH.md` (your research notes file)
 
-**Tools:** ChatGPT or Gemini (scan) → Claude (structure) · **Verify:** talk to 3–5 real users; don’t trust invented TAM.
+**Tools:** ChatGPT or Gemini (scan) → Claude (structure) · **Verify:** talk to 3–5 real users; don’t trust invented **TAM (Total Addressable Market)** numbers from AI.
 
-SPR here = **product risk**: what data you must not collect, what breaks trust, what fails under load later.
+**SPR (Security, Performance, Resiliency)** here means **product risk**: what data you must not collect, what breaks trust, what fails under load later.
+
+Terms: [GLOSSARY.md](GLOSSARY.md)
 
 ---
 
@@ -14,7 +16,7 @@ SPR here = **product risk**: what data you must not collect, what breaks trust, 
 - Users and rough count (campus honest, not fake billions)
 - Alternatives today
 - Why you vs them (1 paragraph)
-- Kill criteria (“stop if …”)
+- **Kill criteria** — signals to stop or pivot (“stop if …”)
 - 5 interview questions
 - SPR risks (privacy, abuse, downtime impact)
 
@@ -42,7 +44,7 @@ Users: [who]
 
 1. Five clarifying questions I should answer
 2. Three existing alternatives (apps or habits)
-3. MVP I could demo in one week vs non-goals
+3. **MVP (Minimum Viable Product)** I could demo in one week vs non-goals
 4. Three reasons this might fail on campus
 
 No code. Bullet format.
@@ -55,7 +57,7 @@ No code. Bullet format.
 ## Advanced
 
 ```
-Role: product analyst for a student MVP (not a VC pitch).
+Role: product analyst for a student MVP (Minimum Viable Product — not a VC / venture capital pitch).
 
 Context:
 - Idea: [one sentence]
@@ -66,10 +68,10 @@ Context:
 Tasks:
 1. Problem statement + who hurts today
 2. Table: Alternative | How users solve it today | Gap
-3. Honest scope: campus N users, not national TAM fiction
+3. Honest scope: campus N users, not national TAM (Total Addressable Market) fiction
 4. Five user interview questions (open-ended)
-5. Kill criteria: three signals to abandon or pivot
-6. SPR as product risk:
+5. Kill criteria: three signals to abandon or pivot the idea
+6. SPR (Security, Performance, Resiliency) as product risk:
    - Security: data we must NOT collect
    - Performance: what feels slow to users
    - Resiliency: what happens if server or Wi-Fi dies

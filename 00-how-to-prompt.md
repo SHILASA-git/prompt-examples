@@ -2,7 +2,7 @@
 
 Every step file uses the same **Basic → Intermediate → Advanced** ladder. This page explains *why* the output changes.
 
-Handbook: [prompting.md](../ai-dev-handbook/prompting.md) · Safety: [what-not-to-do.md](../ai-dev-handbook/what-not-to-do.md)
+**Terms:** [GLOSSARY.md](GLOSSARY.md) · Handbook: [prompting.md](../ai-dev-handbook/prompting.md) · Safety: [what-not-to-do.md](../ai-dev-handbook/what-not-to-do.md)
 
 ---
 
@@ -10,10 +10,10 @@ Handbook: [prompting.md](../ai-dev-handbook/prompting.md) · Safety: [what-not-t
 
 | Part | Example |
 |------|---------|
-| **Role** | “You are a product analyst for a student MVP” |
+| **Role** | “You are a product analyst for a student **MVP (Minimum Viable Product)**” |
 | **Context** | Users, stack, scale, files you paste |
 | **Task** | One deliverable |
-| **Constraints** | SPR, no secrets, no scope creep |
+| **Constraints** | **SPR (Security, Performance, Resiliency)**, no secrets, no scope creep |
 | **Output shape** | Markdown table / numbered sections |
 | **Depth** | `skim` \| `standard` \| `thorough` |
 
@@ -26,10 +26,10 @@ Handbook: [prompting.md](../ai-dev-handbook/prompting.md) · Safety: [what-not-t
 | **Quality ladder** | Weak → specific → full context | All |
 | **Output schema** | “Return only this table” | 1–3, 5 |
 | **Chain then format** | “Think in bullets, then output table only” | 1, 2, 5 |
-| **Critique / red-team** | “Attack this plan; list 5 failures” | 2, 3, 5 |
+| **Critique / red-team** | “Attack this plan like an attacker; list 5 failures” | 2, 3, 5 |
 | **Closed loop** | Findings → fix → re-test | 5 |
-| **Depth knob** | “1 page max” vs “full PRD” | All |
-| **Few-shot** | “Good API row looks like: GET /tasks …” | 3, 4 |
+| **Depth knob** | “1 page max” vs “full **PRD (Product Requirements Document)**” | All |
+| **Few-shot** | “Good **API** row looks like: GET /tasks …” | 3, 4 |
 | **Context pack** | Paste `PRD.md` + `@ARCHITECTURE.md` | 3–6 |
 | **Verify instruction** | “List sources I must open” | 1, 4 |
 
@@ -40,7 +40,7 @@ Handbook: [prompting.md](../ai-dev-handbook/prompting.md) · Safety: [what-not-t
 ```
 depth: skim        → 1 screen, bullets only
 depth: standard    → tables + 1 paragraph per section
-depth: thorough    → SPR checklists, failure modes, citations to verify
+depth: thorough    → SPR (Security, Performance, Resiliency) checklists, failure modes, citations to verify
 ```
 
 ---
@@ -65,9 +65,9 @@ Industry uses many products; students use what the workshop taught.
 ## Basic vs Advanced (same task)
 
 **Basic:** “Is my campus notes app a good idea?”  
-→ Generic hype, no kill criteria.
+→ Generic hype, no **kill criteria** (when to stop or pivot).
 
-**Advanced:** role + users + campus scale + competitor table + interview questions + SPR risks + `RESEARCH.md` schema + “list what I must verify in person.”  
+**Advanced:** role + users + campus scale + competitor table + interview questions + **SPR (Security, Performance, Resiliency)** risks + `RESEARCH.md` schema + “list what I must verify in person.”  
 → Actionable brief you can defend in a demo.
 
 ---
